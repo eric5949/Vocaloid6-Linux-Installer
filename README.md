@@ -1,6 +1,8 @@
 # Vocaloid6 Linux Installer
  Just a script to install Vocaloid6 on Linux. 
 
+ <img src="image.png" width="1000">
+
  Download the script and run it, make sure you have wine, winetricks and yabridge/yabridgectl installed if you want to try and use the VST plugin.
 
  Before running the script, place the installers for any voices you want installed in ~/V6Voices and the script will install them alongside the editor.

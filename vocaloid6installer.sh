@@ -46,6 +46,15 @@ rm -r VOCALOID_Trial_Win
 WINEPREFIX="$wineprefix_path" wineboot > /dev/null 2>&1 | echo "Wineboot Complete"
 WINEPREFIX="$wineprefix_path" winetricks -q dxvk corefonts > /dev/null 2>&1 | echo "Installing prerequitsites...."
 WINEPREFIX="$wineprefix_path" wine VOCALOID6_Editor_Installer.exe > /dev/null 2>&1 | echo "VOCALOID6 Editor Installing..."
+cat > $wineprefix_path/regfix.reg <<EOF
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Avalon.Graphics]
+"DisableHWAcceleration"=dword:00000001
+EOF
+
+WINEPREFIX="$wineprefix_path" wine regedit $wineprefix_path/regfix.reg
+
 read -p "Do you need to install the VOCALOID6 Voicebanks? " yn
 
 case $yn in
