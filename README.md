@@ -19,4 +19,3 @@ bash <(curl -s https://raw.githubusercontent.com/eric5949/Vocaloid6-Linux-Instal
 bash (curl -s https://raw.githubusercontent.com/eric5949/Vocaloid6-Linux-Installer/refs/heads/main/vocaloid6installer.sh | psub)
 ```
 
-VST works on new wine with this yabridge: https://github.com/robbert-vdh/yabridge/actions/workflows/build.yml?query=branch%3Anew-wine10-embedding
